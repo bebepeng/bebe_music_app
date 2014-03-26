@@ -5,5 +5,22 @@
 </head>
 <body>
 <h3>List of Bebe's Favorite Songs:</h3>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Language</th>
+  </tr>
+  <% song_data.each do |song| %>
+  <tr>
+    <td><%= song[0] %></td>
+    <td><%= song[1] %></td>
+    <td><%= song[2] %></td>
+  </tr>
+  <% end %>
+</table>
+<form action="/add_song" method="get">
+  <input type="submit" value="Add to List">
+</form>
 </body>
 </html>
