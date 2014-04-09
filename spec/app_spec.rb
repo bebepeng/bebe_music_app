@@ -22,7 +22,6 @@ feature "Bebe's Favorite Music Site" do
     expect(page).to have_content("Artist Blah")
     expect(page).to have_content("Blah Language")
 
-    #can add to the list via form
     #can sort by sort title, or artist
     #can search for specific song/artist
     #can display youtube videos

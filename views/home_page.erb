@@ -12,11 +12,11 @@
     <th>Language</th>
   </tr>
   <% song_data.each do |song| %>
-  <tr>
-    <td><%= song[0] %></td>
-    <td><%= song[1] %></td>
-    <td><%= song[2] %></td>
-  </tr>
+    <tr>
+      <td><%= song[:title] %></td>
+      <td><%= song[:artist] %></td>
+      <td><%= song[:language] %></td>
+    </tr>
   <% end %>
 </table>
 <form action="/add_song" method="get">

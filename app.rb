@@ -1,6 +1,7 @@
 require 'sinatra/base'
+require './lib/song_list'
 
-SONGDATA = []
+SONGDATA = SongList.new(DB)
 
 class App < Sinatra::Application
   get '/' do
@@ -8,7 +9,7 @@ class App < Sinatra::Application
   end
 
   get '/home' do
-    erb :home_page, :locals => {:song_data => SONGDATA}
+    erb :home_page, :locals => {:song_data => SONGDATA.all}
   end
 
   get '/add_song' do
@@ -16,7 +17,7 @@ class App < Sinatra::Application
   end
 
   post '/home' do
-    SONGDATA << [params[:title], params[:artist], params[:language]]
+    SONGDATA.add(params[:title], params[:artist], params[:language])
     redirect '/home'
   end
 end
