@@ -3,7 +3,11 @@ require 'dotenv'
 
 Dotenv.load
 
-DB = Sequel.connect(ENV['DATABASE'])
+if ENV['HEROKU_POSTGRESQL_BROWN_URL'].nil?
+  DB = Sequel.connect(ENV['DATABASE'])
+else
+  DB = Sequel.connect(ENV['HEROKU_POSTGRESQL_BROWN_URL'])
+end
 
 require './app'
 
