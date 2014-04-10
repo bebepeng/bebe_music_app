@@ -1,26 +1,30 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'>
+  <link href="<%= url('css/stylesheet.css') %>" rel="stylesheet" type="text/css"/>
   <title>Listen to what Bebe Listens to: Home</title>
 </head>
 <body>
-<h3>List of Bebe's Favorite Songs:</h3>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Artist</th>
-    <th>Language</th>
-  </tr>
-  <% song_data.each do |song| %>
+<div id="songlist">
+  <h3>List of Bebe's Favorite Songs:</h3>
+  <table>
     <tr>
-      <td><%= song[:title] %></td>
-      <td><%= song[:artist] %></td>
-      <td><%= song[:language] %></td>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Language</th>
     </tr>
-  <% end %>
-</table>
-<form action="/add_song" method="get">
-  <input type="submit" value="Add to List">
-</form>
+    <% song_data.each do |song| %>
+      <tr>
+        <td><%= song[:title] %></td>
+        <td><%= song[:artist] %></td>
+        <td><%= song[:language] %></td>
+      </tr>
+    <% end %>
+  </table>
+  <form action="/add_song" method="get">
+    <input type="submit" value="Add to List">
+  </form>
+</div>
 </body>
 </html>
