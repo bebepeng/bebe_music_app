@@ -8,7 +8,7 @@
 <body>
 <div id="songlist">
   <h3>List of Bebe's Favorite Songs:</h3>
-  <table>
+  <table class="list">
     <tr>
       <th>Title</th>
       <th>Artist</th>
@@ -16,9 +16,14 @@
     </tr>
     <% song_data.each do |song| %>
       <tr>
-        <td><%= song[:title] %></td>
-        <td><%= song[:artist] %></td>
-        <td><%= song[:language] %></td>
+        <td class="main"><%= song[:title] %></td>
+        <td class="main"><%= song[:artist] %></td>
+        <td class="main"><%= song[:language] %></td>
+        <td class="small">
+          <form action='/home/<%= song[:id] %>' method="get">
+            <input class="small" type="submit" value="Edit Song">
+          </form>
+        </td>
       </tr>
     <% end %>
   </table>

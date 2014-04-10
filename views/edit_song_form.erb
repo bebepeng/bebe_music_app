@@ -7,20 +7,20 @@
 </head>
 <body>
 <div id="songlist">
-  <form action="/home" method="post">
+  <form action="/home/<%= id %>" method="post">
     <div id="form">
-      <table>
+      <table class="form">
         <tr>
           <td>Title:</td>
-          <td><input type="text" name="title" placeholder="Title of Song" size="50"></td>
+          <td><input type="text" name="title" placeholder="Title of Song" value="<%= title %>" size="50"></td>
         </tr>
         <tr>
           <td>Artist:</td>
-          <td><input type="text" name="artist" placeholder="Artist of Song" size="20"></td>
+          <td><input type="text" name="artist" placeholder="Artist of Song" value="<%= artist %>" size="20"></td>
         </tr>
         <tr>
           <td>Language:</td>
-          <td><input type="text" name="language" placeholder="Language the song is in" size="20"></td>
+          <td><input type="text" name="language" placeholder="Language the song is in" value="<%= language %>" size="20"></td>
         </tr>
       </table>
     </div>

@@ -30,23 +30,34 @@ input[type="submit"] {
     border-color: #00747C;
 }
 
-table {
-    margin: 5% auto;
-    background: rgba(255, 255, 255, .6);
-    width: 90%;
-    box-shadow: 3px 3px 2px gray;
+td.small {
+    width: 3%;
 }
 
-table, th, td {
+input.small {
+    font-size: 70%;
+}
+
+table {
+    margin: 5% auto;
+}
+
+table.list {
+    margin: 5% auto;
+    width: 90%;
+}
+
+table.list th, table.list td.main {
     border: 1px solid black;
+    background: rgba(255, 255, 255, .6);
     border-radius: .2em;
 }
 
-th, td {
-    padding: 2%;
+table.list th, table.list td {
+    padding: 1%;
 }
 
-th {
+table.list th {
     background: rgba(0, 116, 124, .6);
 }
 

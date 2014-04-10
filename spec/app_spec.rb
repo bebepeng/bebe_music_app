@@ -5,6 +5,8 @@ require_relative '../app'
 Capybara.app = App
 
 feature "Bebe's Favorite Music Site" do
+  DB[:songlist].delete
+
   scenario "displays a list of my favorite music" do
 
     visit '/'
@@ -22,6 +24,10 @@ feature "Bebe's Favorite Music Site" do
     expect(page).to have_content("Artist Blah")
     expect(page).to have_content("Blah Language")
 
+    click_on "Edit Song"
+    fill_in "title", :with => "Blah Title"
+    click_on "Submit"
+    expect(page).to have_content("Blah Title")
     #can sort by sort title, or artist
     #can search for specific song/artist
     #can display youtube videos
