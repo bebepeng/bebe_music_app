@@ -12,18 +12,36 @@
     <tr>
       <th>Title</th>
       <th>Artist</th>
+      <th>Album</th>
       <th>Language</th>
     </tr>
     <% song_data.each do |song| %>
       <tr>
         <td class="main"><%= song[:title] %></td>
         <td class="main"><%= song[:artist] %></td>
+        <td class="main"><%= song[:album] %></td>
         <td class="main"><%= song[:language] %></td>
         <td class="small">
           <form action='/home/<%= song[:id] %>' method="get">
             <input class="small" type="submit" value="Edit Song">
           </form>
         </td>
+        <% if !song[:youtube].nil? %>
+          <td class="small">
+            <form action="#youtube" method="get">
+              <input class="small" type="submit" value="Listen">
+            </form>
+
+            <div id="youtube" class="modalDialog">
+              <div>
+                <a href="#close" title="Close" class="close">[X]</a>
+                <iframe width="420" height="345"
+                        src="<%= song[:youtube] %>" frameborder="0" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </table>
