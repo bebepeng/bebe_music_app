@@ -28,11 +28,11 @@
         </td>
         <% if !song[:youtube].nil? %>
           <td class="small">
-            <form action="#youtube" method="get">
+            <form action="#youtube<%= song[:id] %>" method="get">
               <input class="small" type="submit" value="Listen">
             </form>
 
-            <div id="youtube" class="modalDialog">
+            <div id="youtube<%=song[:id]%>" class="modalDialog">
               <div>
                 <a href="#close" title="Close" class="close">[X]</a>
                 <iframe width="420" height="345"
