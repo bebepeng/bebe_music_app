@@ -15,7 +15,7 @@ This is an app that displays music that I enjoy listening to
 
 #Heroku Set-Up
 1. to migrate heroku database
-  `heroku run 'sequel -m db/migrate $HEROKU_POSTGRESQL_BROWN_URL' --app better-url-shortener-staging`
+  `heroku run 'sequel -m db/migrate $HEROKU_POSTGRESQL_BROWN_URL' --app pacific-harbor-6271`
 
 #URL
 http://pacific-harbor-6271.herokuapp.com/
