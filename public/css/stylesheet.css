@@ -61,7 +61,7 @@ table.list th {
     background: rgba(0, 116, 124, .6);
 }
 
-#songlist {
+.songlist {
     width: 65%;
     padding: 10%;
     margin: 7% auto;
@@ -70,7 +70,17 @@ table.list th {
     font-size: 125%;
 }
 
-#form {
+.welcome {
+    width: 65%;
+    padding: 10%;
+    margin: 7% auto;
+    background: rgba(0, 187, 201, .4);
+    border-radius: 1em;
+    font-size: 125%;
+    text-align: center;
+}
+
+.form {
     margin: auto auto 10%;
 }
 
@@ -101,4 +111,11 @@ table.list th {
     margin: 10% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
+}
+
+hr {
+    color: black;
+    background-color: black;
+    height: 2px;
+    border: none;
 }
