@@ -7,36 +7,31 @@
 </head>
 <body>
 <div class="songlist">
-  <form action="/home" method="post">
+  <form action="/add_song" method="post">
     <div class="form">
       <table>
         <tr>
           <td>Title:</td>
-          <td><input type="text" name="title" placeholder="Title of Song" value="<%= session[:title] %>"></td>
-          <% session.delete(:title) %>
+          <td><input type="text" name="title" placeholder="Title of Song" value="<%= title %>"></td>
         </tr>
         <tr>
           <td>Artist:</td>
-          <td><input type="text" name="artist" placeholder="Artist of Song" value="<%= session[:artist] %>"></td>
-          <% session.delete(:artist) %>
+          <td><input type="text" name="artist" placeholder="Artist of Song" value="<%= artist %>"></td>
         </tr>
         <tr>
           <td>Album:</td>
-          <td><input type="text" name="album" placeholder="Album of Song" value="<%= session[:album] %>"></td>
-          <% session.delete(:album) %>
+          <td><input type="text" name="album" placeholder="Album of Song" value="<%= album %>"></td>
         </tr>
         <tr>
           <td>Language:</td>
-          <td><input type="text" name="language" placeholder="Language the song is in" value="<%= session[:language] %>"></td>
-          <% session.delete(:language) %>
+          <td><input type="text" name="language" placeholder="Language the song is in" value="<%= language %>"></td>
         </tr>
         <tr>
           <td>Youtube:</td>
-          <td><input type="text" name="youtube" placeholder="Link to Youtube" value="<%= session[:youtube] %>"></td>
-          <% session.delete(:language) %>
+          <td><input type="text" name="youtube" placeholder="Link to Youtube" value="<%= youtube %>"></td>
         </tr>
       </table>
-      <p class="error_message"><%= session[:you_error] %></p>
+      <p class="error_message"><%=  session[:you_error] %></p>
       <% session.delete(:you_error) %>
     </div>
     <input type="submit" value="Submit">

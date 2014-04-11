@@ -84,6 +84,14 @@ table.list th {
     margin: auto auto 10%;
 }
 
+.form table {
+    width: 80%;
+}
+
+.form table td:nth-child(2)  {
+    width: 89%;
+}
+
 .modalDialog {
     position: fixed;
     font-family: 'Dosis', sans-serif;
