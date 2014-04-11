@@ -32,12 +32,14 @@
               <input class="small" type="submit" value="Listen">
             </form>
 
-            <div id="youtube<%=song[:id]%>" class="modalDialog">
+            <div id="youtube<%= song[:id] %>" class="modalDialog">
               <div>
                 <a href="#close" title="Close" class="close">[X]</a>
-                <iframe width="420" height="345"
-                        src="<%= song[:youtube] %>" frameborder="0" allowfullscreen>
-                </iframe>
+                <embed
+                width="420" height="345"
+                src="<%= song[:id] %>"
+                type="application/x-shockwave-flash">
+                </embed>
               </div>
             </div>
           </td>

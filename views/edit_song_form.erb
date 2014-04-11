@@ -31,6 +31,8 @@
           <td><input type="text" name="youtube" placeholder="Link to Youtube" value="<%= youtube %>"></td>
         </tr>
       </table>
+      <p class="error_message"><%= session[:you_error] %></p>
+      <% session.delete(:you_error) %>
     </div>
     <input type="submit" value="Submit">
   </form>
