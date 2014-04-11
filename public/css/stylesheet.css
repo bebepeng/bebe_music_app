@@ -7,10 +7,11 @@ body {
 input[type="text"] {
     margin: .5% auto;
     display: block;
-    width: 80%;
+    width: 90%;
     height: 20px;
     font-size: 80%;
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-shadow: 1px 1px 2px black;
     font-family: 'Dosis', sans-serif;
 }
@@ -81,14 +82,14 @@ table.list th {
 }
 
 .form {
-    margin: auto auto 10%;
+    margin: auto auto 6%;
 }
 
 .form table {
     width: 80%;
 }
 
-.form table td:nth-child(2)  {
+.form table td:nth-child(2) {
     width: 89%;
 }
 
@@ -99,9 +100,9 @@ table.list th {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
@@ -109,7 +110,7 @@ table.list th {
 }
 
 .modalDialog:target {
-    opacity:1;
+    opacity: 1;
     pointer-events: auto;
 }
 
@@ -126,4 +127,14 @@ hr {
     background-color: black;
     height: 2px;
     border: none;
+}
+
+.error_message {
+    text-align: center;
+    color: #FF7102;
+    font-weight: bold;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 1em;
 }
